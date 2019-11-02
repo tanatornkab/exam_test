@@ -31,7 +31,7 @@ router.get('/pokemons',async (req,res)=>{
             res.status(400).json({error : 'data is not found'})
         }
     
-    res.json(r)
+    res.status(200).json(r)
 })
 router.post('/pokemons',async (req,res)=>{
     let name = req.body.name
@@ -53,7 +53,7 @@ router.post('/pokemons',async (req,res)=>{
     let result = { _id:object._id,
         name:object.name,
         type:object.type }
-    res.status(200).json(result)
+    res.status(201).json(result)
 })
 
 
